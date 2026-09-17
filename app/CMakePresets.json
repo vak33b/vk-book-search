@@ -1,0 +1,34 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "mac-arm64-debug",
+      "displayName": "Mac M4 \u2014 Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_PREFIX_PATH": "/opt/homebrew;/opt/homebrew/opt/icu4c@78",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "mac-arm64-debug",
+      "configurePreset": "mac-arm64-debug",
+      "jobs": 4
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "mac-arm64-debug",
+      "configurePreset": "mac-arm64-debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

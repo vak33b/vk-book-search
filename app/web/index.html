@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Полка — книги из VK</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">▤ Полка <span>книги из VK</span></a><span class="local">Личная библиотека</span></header>
+<main>
+<section class="intro"><p class="eyebrow">ПОИСК ПО КНИГАМ</p><h1>Найди нужную мысль.</h1><p>Ищи по названию, публикации или содержимому доступных документов.</p></section>
+<form id="search-form">
+<div class="searchbar"><label class="sr-only" for="q">Слово или фраза</label><input id="q" name="q" placeholder="Например, average model prediction" maxlength="1024" type="search"><button type="submit">Найти</button></div>
+<div class="toolbar"><label>Где искать <select name="scope"><option value="all">Везде</option><option value="body">В тексте документа</option><option value="title">В названии</option><option value="post">В публикации VK</option><option value="annotation">В аннотации</option></select></label><button class="text-button" type="reset">Сбросить</button></div>
+<details class="filters"><summary>Фильтры</summary><div class="filter-grid"><label>Сообщество<select name="community" id="community"><option value="">Все подключённые</option></select></label><label>Название<input name="title" maxlength="1024" placeholder="Часть названия"></label><label>Совпадение<select name="title_match"><option value="partial">Частичное</option><option value="exact">Точное</option></select></label><label>Автор<input name="author" maxlength="1024" placeholder="Фамилия автора"></label><label>Год<input name="year" type="number" min="1" max="9999" placeholder="Например, 2024"></label><label>Тег<input name="tag" maxlength="256" placeholder="Например, Python"></label></div><p class="hint">Фильтры действуют одновременно. Документы без указанного автора, года или тега не попадут в выдачу при выборе этого фильтра.</p></details>
+</form>
+<div class="results-heading"><h2 id="result-title">Каталог</h2><span id="coverage"></span></div>
+<p id="status" role="status" aria-live="polite">Загрузка каталога…</p>
+<div id="results" aria-busy="true"></div>
+<nav id="pagination" aria-label="Страницы результатов" hidden><button id="prev" class="secondary">← Назад</button><span id="page"></span><button id="next" class="secondary">Далее →</button></nav>
+<footer>Каталог содержит документы из выбранных публикаций VK. Поиск внутри файла доступен только после извлечения его текста. Несколько слов ищутся как одна фраза.</footer>
+</main></body></html>

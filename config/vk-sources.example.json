@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source_type": "vk",
+  "communities": [
+    {
+      "domain": "proglib",
+      "url": "https://vk.com/proglib",
+      "display_name": "Библиотека программиста",
+      "priority": 1,
+      "status": "configured"
+    },
+    {
+      "domain": "bookflow",
+      "url": "https://vk.com/bookflow",
+      "display_name": "Программирование {BookFlow}",
+      "priority": 2,
+      "status": "configured"
+    }
+  ],
+  "automatic_collection_enabled": false,
+  "note": "Ручной запуск sync: до 3 страниц по 100 публикаций каждого метода на сообщество. Это ограниченная выборка, не полный архив.",
+  "max_pages_per_method": 3
+}

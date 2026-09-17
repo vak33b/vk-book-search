@@ -1,0 +1,13 @@
+**/build/
+**/.venv/
+**/__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example
+app/data/*
+!app/data/catalog.example.json
+**/private/
+*.log
+materials/
